@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+	padding:0;
+}
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    min-height: 100%;
+    overflow: auto;
+    /* background:#eee; */
+    
+}
+.cont{
+    background-color: #F7F1F0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+h1, h3{
+    text-align: center;
+}
+/* Navbar */
+.navbar{
+    position: relative;
+}
+a.nav-link:hover {
+    background-color: rgba(1, 94, 93, 0.75);
+    border-radius: 5px;
+}
+/* Logo */
+.d-inline-block{
+    margin-top: -6px;
+}
+
+#aboutSection,#vision,#facilitiesSection,#contactSection{
+    padding-top:63px;
+}
+#gallerySection,#gall{
+    padding-top:60px;
+}
+/* Facilities */
+td{
+    padding-top: 10px;
+    width: 500px;
+    padding-left: 10px;
+    text-align: center;
+}
+.logo{
+    border-radius: 500px;
+    height: 70px;
+    width: 70px;
+}
+/* footer */
+.bottom {
+    position:sticky;
+    padding: 1rem;
+    background: rgb(1, 94, 93);
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    gap: 0.2rem;
+}
+/* Contact */
+.profile{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    /* margin-top: 3rem; */
+    border-radius: 50%;
+}
+.text-center{
+    text-align: center;
+}
+.cared:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background-color:rgb(4, 226, 222);
+    transform:scaleY(1);
+    transition:all 0.5s;
+    transform-origin: bottom
+} 
+.cared:after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background-color:rgb(1, 94, 93);
+    transform:scaleY(0);
+    transition:all 0.5s;
+    transform-origin: bottom
+}
+.cared:hover::after{
+    transform:scaleY(1);
+}
+.buttons button:nth-child(1){
+    border:1px solid rgb(1, 94, 93) !important;
+    color:rgb(1, 94, 93);
+    height:40px;
+    width: 120px;
+}
+.buttons button:nth-child(1):hover{
+    border:1px solid rgb(1, 94, 93) !important;
+    color:#fff;
+    height:40px;
+    background-color:rgb(1, 94, 93);
+    width: 120px;
+}
+.buttons button:nth-child(2){
+    border:1px solid rgb(1, 94, 93) !important;
+    background-color:rgb(1, 94, 93);
+    color:#fff;
+    height:40px;
+    width: 120px;
+}
+.buttons button:nth-child(2):hover{
+    border:1px solid rgb(1, 94, 93) !important;
+    background-color:#fff;
+    height:40px;
+    color:rgb(1, 94, 93);
+    width: 120px;
+}
+.google-map {
+    position: relative;
+}
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+/* Gallery */
+#gallerySection{
+    display: flex;
+    padding: 0 35px;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background: #CCD9E2;
+}
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+}
+.wrapper i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+    background: #f2f2f2;
+}
+.wrapper i:first-child{
+    left: -22px;
+    display: none;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel_gallery{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel_gallery.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel_gallery.dragging img{
+    pointer-events: none;
+}
+.carousel_gallery img{
+    height: 340px;
+    object-fit: cover;
+    /* user-select: none; */
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+.carousel_gallery img:first-child{
+    margin-left: 0px;
+}
+@media screen and (max-width: 900px) {
+    .carousel_gallery img{
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 550px) {
+    .carousel_gallery img{
+        width: 100%;
+    }
+}
+
+.main{
+    width:70%; height:550px;position: absolute;
+    background-image: url('https://images.collegedunia.com/public/college_data/images/campusimage/14335821442.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 550px;
+    animation: slider 40s infinite linear;
+  
+}
+@keyframes slider{
+    
+    0%{ padding-top:250px;
+         background-image: url('https://img.jagranjosh.com/images/2022/March/1132022/1519193212php7zAlt.png');
+        background-repeat: no-repeat;
+        background-size:100% 550px;}
+    10%{  background-image: url('https://library.chitkara.edu.in/images/gallery/media/CUP09658.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px;}
+    20%{background-image: url('https://media.getmyuni.com/reviews/26286__9117/1479314893Image000.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+    30%{background-image: url('https://images.unsplash.com/photo-1608198399988-341f712c3711?w=720&h=720&fit=crop');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+    40%{background-image: url('https://images.collegedunia.com/public/college_data/images/campusimage/144256509914335837844.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+    50%{background-image: url('https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231404.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+    60%{ background-image: url('https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231431.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px;}
+    70%{background-image: url('https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231423.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+    80%{background-image: url('https://library.chitkara.edu.in/images/gallery/engineering/CUP09589.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+    90%{ background-image: url('https://www.dalailama.com/assets/news-articles/2019-10-14-Chandigarh-N05-SA900752.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px;}
+    100%{background-image: url('https://www.collegebatch.com/static/clg-gallery/chitkara-university-chitkara-school-of-mass-communication-patiala-251729.jpg');
+        background-repeat: no-repeat;
+        background-size:100% 550px; }
+}
